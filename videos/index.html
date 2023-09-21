@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <title>Simon Capon | Mentality Training</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simon Capon has over twenty years’
+    experience working with all levels of competitors from Amateur to World champions.">
+  <meta name="keywords" content="Sports psychology, mindset training, NLP, Isle of Wight, winning, motivation,
+  confidence, nerves, anxiety, stress">
+  <meta name="author" content="Simon Capon">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Fonts I used -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="home-body">
+  
+    <!-- Navbar & Heading -->
+    <section class="header">
+      
+        <header id="home-header">
+          
+            <nav>
+              <input type="checkbox" id="active">
+              <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
+              <a href="index.html"><img src="images/transparent_logo.png"></a>
+                        <div class="nav-links" id="navLinks">
+                 <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="What-I-Do.html">WHAT I DO</a></li>
+                        <li><a href="Courses.html">COURSES</a></li>
+                        <li class="testimonial-link"><a href="Testimonials.html">TESTIMONIALS</a></li>
+                        <li><a href="Contact.html">CONTACT</a></li>
+                        
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Landing page -->
+        <div class="text-box">
+            <div class="slogan">
+                <h1>Feeling The Pressure of Competitive Sport? </h1>
+                <p>Develop and master a bulletproof mindset.</p>
+            </div>
+            <div class="text-box-image">
+                <img src="images/header-image.jpg">
+            </div>
+        </div>
+
+        <div class="aip-logo">
+          <img src="images/AIP-logo.png">
+        </div>
+        <i class="fa fa-angle-double-down" id="scroll-icon" aria-hidden="true"></i>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="home-introduction">
+
+        <div class="example">
+            <div class="text">
+                <h1>WHO IS SIMON CAPON?</h1>
+            </div>
+
+            <img class="image" src="images/selfie1copy.jpg">
+
+        </div>
+
+        <div class="first-part">
+            <p>Simon Capon is a Trainer and master practitioner of a psychology called Neuro-linguistic programming. (NLP).
+                Over the last twenty years he has brought together a collection of psychological skills and techniques to
+                produce a program that is dedicated to the development of sports individuals and teams.
+            </p>
+        </div>
+
+        <div class="second-part">
+            <p>No matter if you’re a keen amateur or a world class competitor in the making one of your biggest challenge
+                you will face is the battle in your head. Often, we are told by supposed experts that only a selected few
+                have the ability to remain focused whilst under extreme pressure. The reality is that everyone is in possession
+                of everything required to perform under extreme pressure with clarity, courage, and certainty. This is possible
+                by adopting some remarkably simple yet highly effective skills through a face-to-face meeting, video conference
+                call or the revolutionary training incognito.
+            </p>
+            </div>
+        
+            <!--  Free Videos -->
+
+        <div class="video-container">
+       <div class="home-videos">
+        <video class="first-home-video" width="450" height="477" controls>
+            <source src="videos/Home-video1.mp4" type="video/mp4">
+          </video>
+       </div>
+
+       <div class="home-videos">
+        <video class="second-home-video" width="450" height="477" controls>
+            <source src="videos/Home-video2.mp4" type="video/mp4">
+          </video>
+       </div>
+       </div>
+
+       <a class="free-videos-link" href="https://www.facebook.com/groups/436463539726916">
+        For More Free Videos Click Here
+       </a>
+    </section>
+
+<!--  JavaScript  -->
+
+<script>
+
+/*This event listener waits for the DOM(Document Object Model) to be fully loaded before executing the code inside
+It ensures that the javaScript code doesn't run until the HTML is ready*/
+document.addEventListener("DOMContentLoaded", function () {
+  /*This event listener is attached to the scrollToTopIcon using the id #scroll-icon.
+  When the icon is clicked, it triggers a smooth scroll behaviour to move the user to the top of the introductory
+  section of the page*/
+  const scrollToTopIcon = document.getElementById("scroll-icon");
+  const introSection = document.querySelector(".home-introduction");
+  const header = document.querySelector("header");
+  const body = document.body;
+
+  let scrollOffset = -10; // Default scroll offset value
+  let headerBlackActive = false;
+
+  var maxWidthForScrollAdjustment = 600; // Max width for scroll adjustment
+
+  /*This function adjusts the scrollOffset variable based on the screen width.
+  if the screen width is less than or equal to the maxWidthForScrollAdjustment (600pixels)
+  it sets scrollOffset to a larger negative value (-40) which affects scrolling behaviour for
+  smaller screens.
+  for larger screens, it uses the default scrollOffset value (-10).*/
+  function adjustScrollOffset() {
+    // Check the screen width
+    if (window.innerWidth <= maxWidthForScrollAdjustment) {
+      // Adjust scroll offset for screens with a max width of maxWidthForScrollAdjustment
+      scrollOffset = -40; // Adjust this value as needed
+    } else {
+      scrollOffset = -10; // Use the default scroll offset for larger screens
+    }
+  }
+/*This function is responsible for handling the scrolling behaviour and adjusting the header's
+appearance as the user scrolls.
+It checks the position of the introductory section and header to determine when to change the
+header's background color and show/hide the footer*/
+  function handleScroll() {
+    const introSectionRect = introSection.getBoundingClientRect();
+    const footer = document.querySelector(".footer");
+
+    if (introSectionRect.top <= header.offsetHeight - scrollOffset) {
+      header.classList.add("header-black");
+      headerBlackActive = true; // Header-black is active
+      body.classList.remove("disable-scroll"); // Enable scrolling
+
+      // Show the footer
+      footer.classList.remove("footer-hidden");
+    } else {
+      header.classList.remove("header-black");
+      headerBlackActive = false; // Header-black is not active
+      body.classList.add("disable-scroll"); // Disable scrolling
+
+      // Hide the footer
+      footer.classList.add("footer-hidden");
+    }
+  }
+
+  scrollToTopIcon.addEventListener("click", function () {
+    // Calculate the scroll position to leave space for the header
+    let scrollPosition = 0;
+
+    // Check the screen width
+    if (window.innerWidth <= maxWidthForScrollAdjustment) {
+      // Adjust scroll position for screens with a max width of maxWidthForScrollAdjustment
+      scrollPosition = introSection.offsetTop - header.offsetHeight - 40; // Adjust this value as needed
+    } else {
+      scrollPosition = introSection.offsetTop - header.offsetHeight;
+    }
+
+    // Scroll to the desired position with smooth scrolling behavior
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
+  });
+
+  /*This code block adds a scroll event listener to the window object.
+  whent he user scrolls the page, this listener triggers the functions
+  adjustScrollOffset() and handleScroll(). It is responsible for adjusting
+  the scrolling behaviour and updating the header's style as the user
+  scrolls up and down the page*/
+  window.addEventListener("scroll", function () {
+    adjustScrollOffset(); // Adjust scroll offset based on screen width
+
+    if (headerBlackActive) {
+      // If header-black is active, prevent scrolling up beyond a certain point
+      if (window.scrollY < introSection.offsetTop - header.offsetHeight - 40) {
+        window.scrollTo({
+          top: introSection.offsetTop - header.offsetHeight - 40,
+          behavior: "auto",
+        });
+      }
+    }
+
+    // Update the header style as the user scrolls
+    handleScroll();
+  });
+
+  // Initial check to see if scrolling should be allowed
+  adjustScrollOffset(); // Adjust scroll offset based on initial screen width
+  handleScroll();
+});
+  </script>    
+
+<!--  Footer  -->
+
+<footer class="footer footer-hidden">
+    <div class="footer-content">
+      <div class="desktop-links">
+        <a class="phone-link" href="https://wa.me/+447753286234">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+            07753 286 234
+          </a>
+        <a class="email-link" href="mailto:info@simoncapon.co.uk">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          info@simoncapon.co.uk
+        </a>
+      </div>
+      <div class="mobile-buttons">
+        <a class="phone-button" href="https://wa.me/+447753286234">
+          <button>
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </button>
+         </a>
+        <a class="email-button" href="mailto:info@simoncapon.co.uk">
+          <button>
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </button>
+  </a>
+  
+      </div>
+    </footer>
+</body>
+</html>
