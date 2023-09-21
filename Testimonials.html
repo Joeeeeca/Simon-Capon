@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <title>Testimonials | Mentality Training</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The success of the coach is solely based on the client’s experience.">
+  <meta name="keywords" content="Sports psychology, mindset training, NLP, Isle of Wight, winning, motivation,
+  confidence, nerves, anxiety, stress">
+  <meta name="author" content="Simon Capon">
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link to icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--  Fonts I used  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="testimonial-body">
+
+      <!--  To create a background on the navbar for when you scroll on phone  -->
+    <header id="phone-header">
+      
+      <!--  Navbar & Header  -->
+        <nav class="testimonial-navbar">
+          <input type="checkbox" id="active">
+          <label for="active" class="menu-btn" id="testimonials-menu-btn"><i class="fas fa-bars"></i></label>
+          <a href="index.html"><img src="images/transparent_logo.png"></a>
+                    <div class="nav-links" id="testimonialsNavLinks">
+             <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="What-I-Do.html">WHAT I DO</a></li>
+                    <li><a href="Courses.html">COURSES</a></li>
+                    <li><a href="Testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="Contact.html">CONTACT</a></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--  Testimonials section  -->
+      <section class="testimonials">
+
+        <div class="testimonials-text-section">
+          <h1>Testimonials</h1>
+          <h2>Here's what other people say about Simon! </h2>
+        </div>
+
+        <div class="grid-container">
+       <!-- Add inline styles to set the video dimensions -->
+<div class="testimonial-videos video-container2">
+
+  <video id="first-testimonial-video" class="first-testimonial-video"width="400" height="400">
+    <source src="videos/testimonial1.mp4" type="video/mp4">
+  </video>
+
+  <div class="play-button-container">
+  <div class="play-button">
+    <i class="fas fa-play"></i>
+</div>
+
+<div class="pause-button">
+  <i class="fas fa-pause"></i>
+</div>
+  </div>
+</div>
+
+<div class="testimonial-videos video-container2">
+
+  <video id="second-testimonial-video" class="second-testimonial-video" width="400" height="400">
+    <source src="videos/testimonial2.mp4" controls id="myvideo" type="video/mp4">
+            </video>
+
+            <div class="play-button-container">
+              <div class="play-button">
+                <i class="fas fa-play"></i>
+            </div>
+            
+            <div class="pause-button">
+              <i class="fas fa-pause"></i>
+            </div>
+              </div>
+          </div>
+
+          <div class="testimonial-videos video-container2">
+
+            <video id="third-testimonial-video" class="third-testimonial-video" width="400" height="400">
+              <source src="videos/testimonial3.mp4" controls id="myvideo" type="video/mp4">
+                      </video>
+
+                      <div class="play-button-container">
+                        <div class="play-button">
+                          <i class="fas fa-play"></i>
+                      </div>
+                      
+                      <div class="pause-button">
+                        <i class="fas fa-pause"></i>
+                      </div>
+                        </div>
+                    </div>
+
+
+
+        </div>
+        </section>
+
+
+          <!--  JavaScript  -->
+
+        <script>
+          // Get all play buttons, pause buttons, and video elements
+          const playButtons = document.querySelectorAll('.play-button');
+          const pauseButtons = document.querySelectorAll('.pause-button');
+          const videos = document.querySelectorAll('.testimonial-videos video');
+          const videoContainers = document.querySelectorAll('.testimonial-videos');
+        
+          // Function to handle the play/pause and button visibility
+          function handlePlayPause(index) {
+            if (videos[index].paused) {
+              // If the video is paused, play it
+              videos[index].play();
+              // Hide the pause button on small screens (max-width: 600px)
+              if (window.innerWidth <= 600) {
+                playButtons[index].style.opacity = 0;
+                pauseButtons[index].style.opacity = 0; // Hide pause button on small screens
+              } else {
+                playButtons[index].style.opacity = 0; // Hide play button on larger screens
+              }
+            } else {
+              // If the video is playing, pause it
+              videos[index].pause();
+              // Show the play button on small screens (max-width: 600px)
+              if (window.innerWidth <= 600) {
+                playButtons[index].style.opacity = 1;
+                pauseButtons[index].style.opacity = 0; // Hide pause button on small screens
+              } else {
+                playButtons[index].style.opacity = 1; // Show play button on larger screens
+              }
+            }
+          }
+        
+          // Add event listeners to update button visibility when the video state changes
+          videos.forEach((video, index) => {
+            video.addEventListener('play', () => {
+              updateButtonVisibility(index);
+            });
+        
+            video.addEventListener('pause', () => {
+              updateButtonVisibility(index);
+            });
+        
+            // Add click event listener to the video element itself
+            video.addEventListener('click', () => {
+              handlePlayPause(index);
+            });
+          });
+        
+          // Add click event listeners to each play button
+          playButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+              handlePlayPause(index);
+            });
+          });
+        
+          // Add click event listeners to each pause button
+          pauseButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+              handlePlayPause(index);
+            });
+          });
+        
+          // Add mouseenter and mouseleave event listeners to each video container
+          videoContainers.forEach((container, index) => {
+            container.addEventListener('mouseenter', () => {
+              if (videos[index].paused) {
+                showPlayButton(index);
+              } else {
+                updateButtonVisibility(index);
+              }
+            });
+        
+            container.addEventListener('mouseleave', () => {
+              if (videos[index].paused) {
+                playButtons[index].style.opacity = 1;
+              } else {
+                pauseButtons[index].style.opacity = 0;
+              }
+            });
+          });
+        
+          // Ensure play buttons are initially displayed
+          playButtons.forEach((button, index) => {
+            updateButtonVisibility(index);
+          });
+        
+          // Handle window resize to hide pause buttons on small screens
+          window.addEventListener('resize', () => {
+            if (window.innerWidth <= 600) {
+              pauseButtons.forEach((button, index) => {
+                button.style.opacity = 0;
+              });
+            }
+          });
+        </script>
+        
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="desktop-links">
+      <a class="phone-link" href="https://wa.me/+447753286234">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          07753 286 234
+        </a>
+      <a class="email-link" href="mailto:info@simoncapon.co.uk">
+        <i class="fa fa-envelope" aria-hidden="true"></i>
+        info@simoncapon.co.uk
+      </a>
+    </div>
+    <div class="mobile-buttons">
+      <a class="phone-button" href="https://wa.me/+447753286234">
+        <button>
+        <i class="fa fa-phone" aria-hidden="true"></i>
+      </button>
+       </a>
+      <a class="email-button" href="mailto:info@simoncapon.co.uk">
+        <button>
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+      </button>
+</a>
+
+    </div>
+  </footer>
+       
+        </body>
+
+
+    </html>
