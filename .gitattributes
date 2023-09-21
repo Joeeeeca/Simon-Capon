@@ -1,1 +1,7 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+*.testimonial.mp4 filter=lfs diff=lfs merge=lfs -text
+*.testimonial1.mp4 filter=lfs diff=lfs merge=lfs -text
+*.testimonial2.mp4 filter=lfs diff=lfs merge=lfs -text
+*.testimonial3.mp4 filter=lfs diff=lfs merge=lfs -text
+*.home-video1.mp4 filter=lfs diff=lfs merge=lfs -text
+*home-video2.mp4 filter=lfs diff=lfs merge=lfs -text
