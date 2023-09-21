@@ -838,7 +838,7 @@ opacity: 0;
 @media only screen and (max-width: 600px) {
 
   .home-body{
-    min-height:390vh;
+    min-height:320vh;
   }
   header {
     position: fixed;
@@ -966,7 +966,7 @@ opacity: 0;
   width:70px;
   height:60px;
   background-color:white;
-  bottom:50px;
+  bottom:70px;
  }
 
  .aip-logo img {
@@ -986,16 +986,16 @@ opacity: 0;
 
   @keyframes bounce {
     0% {
-      transform: translateX(-45%) translateY(10px); 
+      transform: translateX(-45%) translateY(0px); 
     }
     10% {
-      transform: translateX(-45%) translateY(0px);
+      transform: translateX(-45%) translateY(-10px);
     }
     20% {
-      transform: translateX(-45%) translateY(10px); 
+      transform: translateX(-45%) translateY(0px); 
     }
     25%, 100% {
-      transform: translateX(-45%) translateY(10px);
+      transform: translateX(-45%) translateY(0px);
     }
     }
   
