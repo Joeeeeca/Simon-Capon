@@ -966,7 +966,7 @@ opacity: 0;
   width:70px;
   height:60px;
   background-color:white;
-  bottom:40px;
+  bottom:50px;
  }
 
  .aip-logo img {
@@ -983,6 +983,21 @@ opacity: 0;
   text-align: center;
   position: fixed;
   }
+
+  @keyframes bounce {
+0% {
+  transform: translateX(-45%) translateY(10px); 
+}
+10% {
+  transform: translateX(-45%) translateY(0px);
+}
+20% {
+  transform: translateX(-45%) translateY(10px); 
+}
+25%, 100% {
+  transform: translateX(-45%) translateY(10px);
+}
+}
   
 
 .header-black {
