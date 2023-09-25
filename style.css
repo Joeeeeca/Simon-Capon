@@ -838,7 +838,7 @@ opacity: 0;
 @media only screen and (max-width: 600px) {
 
   .home-body{
-    min-height:340vh;
+    min-height:350vh;
   }
   header {
     position: fixed;
@@ -1309,10 +1309,16 @@ font-size:20px;
 }
 
 
-.testimonial-videos video {
-  height:400px;
+.first-testimonial-video video,
+      .second-testimonial-video video {
+  height400px;
   width:200px:
+  margin-top:-30px;
 }
+      .third-testimonial-video video {
+        height:200px;
+        width:200px;
+    }
     }
 
    
