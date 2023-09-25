@@ -1304,14 +1304,14 @@ font-size:20px;
 }
 
 .testimonial-videos {
-  height: 300px;
+  height: 200px;
   border-radius:10px;
 }
 
 
 .testimonial-videos video {
-  height:100%;
-  width:100%:
+  height:200px;
+  width:200px:
 }
     }
 
