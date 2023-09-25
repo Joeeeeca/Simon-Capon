@@ -838,7 +838,7 @@ opacity: 0;
 @media only screen and (max-width: 600px) {
 
   .home-body{
-    min-height:360vh;
+    min-height:340vh;
   }
   header {
     position: fixed;
