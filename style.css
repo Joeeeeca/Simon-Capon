@@ -1311,7 +1311,7 @@ font-size:20px;
 
 .first-testimonial-video video,
       .second-testimonial-video video {
-  height400px;
+  height:400px;
   width:200px:
   margin-top:-30px;
 }
