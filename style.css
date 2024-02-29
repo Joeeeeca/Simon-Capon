@@ -1558,6 +1558,3 @@ font-family:'poppins', sans-serif;
     font-size: 16px;
   }
 
-.email-subscription-section.show {
-  display: flex; /* Show the section when the "show" class is added */
-}
