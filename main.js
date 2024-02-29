@@ -105,47 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function screen () {
     myWidth =  window.innerWidth;
     myHeight = window.innerHeight;
-  
-    document.getElementById("size").innerHTML = "Width : " + myWidth + "px";
-    document.getElementById("height").innerHTML = "height : " + myHeight + "px";
-  }
-
-
-
-
-  document.addEventListener("DOMContentLoaded", function () {
-    const subscriptionForm = document.getElementById("subscription-form");
-    const thankYouSection = document.getElementById("thank-you-section");
-    const emailSubscriptionSection = document.querySelector(".email-subscription-section");
-
-    // Function to show the email subscription section
-    function showEmailSubscriptionSection() {
-        emailSubscriptionSection.classList.add("show");
-    }
-
-    // Function to hide the email subscription section
-    function hideEmailSubscriptionSection() {
-        emailSubscriptionSection.classList.remove("show");
-    }
-
-    // Function to handle form submission
-    subscriptionForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
-
-        // Simulate subscribing action (replace with your actual subscription logic)
-        // For now, we're just showing the thank you section
-        thankYouSection.style.display = "block"; // Show the thank you section
-        hideEmailSubscriptionSection(); // Hide the email subscription section after submission
-    });
-
-    // Check if the email subscription section is still hidden after a delay
-    setTimeout(function () {
-        if (window.getComputedStyle(emailSubscriptionSection).display === "none") {
-            // If the email subscription section is still hidden after the delay, assume the pop-up form was closed without subscribing
-            showEmailSubscriptionSection(); // Show the email subscription section
-        }
-    }, 5000); // Adjust the delay as needed (in milliseconds)
-});
 
 
 
