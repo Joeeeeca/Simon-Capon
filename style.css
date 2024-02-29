@@ -1444,7 +1444,57 @@ nav img {
     column-gap: 80px;
   }
 
-  .email-subscription-section {
+ 
+  #training-incognito-box {
+    height:800px;
+  }
+
+  .testimonials-video-container {
+    column-gap: 50px;
+  }
+
+
+  .contact-container {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 83vh; /* Set the height of .contact-container to 100% of viewport height */
+  }
+
+  .left-contact-container h1,
+  .left-contact-container p,
+  .left-contact-container .fa-envelope {
+    font-size: 5vh;
+  }
+
+  #contact-form {
+    width: 100%; /* Set a wider width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add padding for better spacing inside the form */
+  }
+
+  #contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+  width:80%;
+font-size:2.8vh;
+text-align:Center;
+font-family:'poppins', sans-serif;
+}
+
+#contact-form textarea {
+  height: 150px;
+}
+
+
+#contact-form button {
+  font-size: 2.2vh;
+}
+
+
+}
+
+ .email-subscription-section {
     background-color: #383938;
     display: flex;
     justify-content: center;
@@ -1507,53 +1557,4 @@ nav img {
     border: none;
     font-size: 16px;
   }
-
-  #training-incognito-box {
-    height:800px;
-  }
-
-  .testimonials-video-container {
-    column-gap: 50px;
-  }
-
-
-  .contact-container {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 83vh; /* Set the height of .contact-container to 100% of viewport height */
-  }
-
-  .left-contact-container h1,
-  .left-contact-container p,
-  .left-contact-container .fa-envelope {
-    font-size: 5vh;
-  }
-
-  #contact-form {
-    width: 100%; /* Set a wider width for the form */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px; /* Add padding for better spacing inside the form */
-  }
-
-  #contact-form input[type="text"],
-#contact-form input[type="email"],
-#contact-form textarea {
-  width:80%;
-font-size:2.8vh;
-text-align:Center;
-font-family:'poppins', sans-serif;
-}
-
-#contact-form textarea {
-  height: 150px;
-}
-
-
-#contact-form button {
-  font-size: 2.2vh;
-}
-
-
-}
 
